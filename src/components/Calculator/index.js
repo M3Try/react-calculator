@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Container, Screen } from './Styled';
 
 
-export default function Calculator(params) {
+
+export default function Calculator() {
     return (
-        <div>Test Calculator</div>
+        <Container>
+            <Screen></Screen>
+        </Container>
     )
 }
