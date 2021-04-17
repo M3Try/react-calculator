@@ -25,3 +25,23 @@ export const Screen = styled.div`
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 `
+export const Previous = styled.div`
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+`
+
+export const Current = styled.div`
+    color: white;
+    font-size: 2.5rem;
+`
+
+export const Button = styled.button`
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px outset white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+`
