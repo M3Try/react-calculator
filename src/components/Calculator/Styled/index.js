@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-content: center;
     width: 400px;
     margin: 40px auto;
-    grid-template-column: repeat(4, 100px);
+    grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     box-shadow: 2px 2px 10px #333;
     border-radius: 10px;
@@ -25,11 +25,11 @@ export const Screen = styled.div`
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 `
+
 export const Previous = styled.div`
     color: rgba(255, 255, 255, 0.75);
     font-size: 1.5rem;
 `
-
 export const Current = styled.div`
     color: white;
     font-size: 2.5rem;
@@ -44,4 +44,20 @@ export const Button = styled.button`
     &:hover {
         background-color: rgba(255, 255, 255, 0.9);
     }
+
+    /* EXPANDED FORM EXAMPLE */
+    ${function ({ gridSpan }) {
+        if (gridSpan) {
+            return `grid-column: span ${gridSpan};`
+        }
+    }}
+
+    ${({ gridSpan }) => gridSpan && `grid-column: span ${gridSpan};`}
+    ${({ operation }) => operation && `background-color: gray;`}
+    ${({ control }) => control && `background-color: skyblue;`}
+    ${({ equals }) => equals && `border-bottom-right-radius: 10px; background-color: gray;`}
+    ${({ period }) => period && `border-bottom-left-radius: 10px; background-color: skyblue;`}
+
 `
+
+//Created by dagowaksdev @2021
