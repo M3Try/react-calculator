@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![](react-calculator.gif)
+
+Created by [dagowaksdev](https://github.com/M3Try)
+
 ## Available Scripts
 
 In the project directory, you can run:
